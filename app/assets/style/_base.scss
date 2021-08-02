@@ -1,6 +1,10 @@
 body {
   font-family: $font-style;
+  line-height: 1.5;
 }
 a {
   text-decoration: none;
+}
+img {
+  display: block;
 }

@@ -1,3 +1,6 @@
+a {
+  color: $head-footer-font-color;
+}
 .header {
   height: 108px;
   background-color: $themes-primary;
@@ -5,71 +8,151 @@
   justify-content: space-between;
   align-items: center;
   padding-left: 88px;
-  padding-right: 24px;
+  padding-right: 88px;
   font-size: 20px;
-  a {
-    color: $head-footer-font-color;
+  @include tablet() {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+  @include mobile {
+    height: 140px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    img {
+      width: 48px;
+      height: 29px;
+    }
   }
   ul {
     display: flex;
-  }
-  li {
-    margin-right: 64px;
+    @include mobile {
+      width: 100%;
+      flex-wrap: wrap;
+      text-align: center;
+      align-items: center;
+      li {
+        width: 50%;
+        height: 45px;
+        box-sizing: border-box;
+        border: #ffffff solid 1px;
+      }
+    }
+    li:not(:last-child) {
+      margin-right: 64px;
+      @include tablet() {
+        margin-right: 40px;
+      }
+      @include mobile {
+        margin-right: 0px;
+      }
+    }
   }
 }
 
 .footer {
-  height: 333px;
   background-color: $themes-primary;
   color: $head-footer-font-color;
   padding-top: 44px;
-  .footer-contain {
+  padding-bottom: 39px;
+  &-contain {
     width: 1110px;
     margin: 0 auto;
+    @include tablet() {
+      width: 690px;
+    }
+  }
+  @include tablet() {
+    padding-top: 38px;
+    padding-bottom: 21px;
   }
 
   .links {
     display: flex;
     justify-content: space-between;
     font-size: 16px;
-    margin-bottom: 36px;
     align-items: center;
+    margin-bottom: 36px;
+    @include tablet {
+      margin-bottom: 18px;
+    }
     ul {
       display: flex;
+      &:nth-child(1) li:not(:last-child) {
+        margin-right: 48px;
+        @include tablet {
+          margin-right: 40px;
+        }
+      }
+      &:nth-child(2) {
+        img {
+          @include tablet {
+            width: 24px;
+            height: 24px;
+          }
+        }
+        li:not(:last-child) {
+          margin-right: 32px;
+          @include tablet {
+            margin-right: 24px;
+          }
+        }
+      }
     }
-    ul:nth-child(1) li {
-      margin-right: 48px;
-    }
-    ul:nth-child(2) li:not(:last-child) {
-      margin-right: 32px;
-    }
-  }
-  a {
-    color: $head-footer-font-color;
   }
 
   .contact {
     border-bottom: 1px solid #ffffff;
     font-size: 36px;
-    padding-bottom: 8px;
+    padding-bottom: 24px;
     font-family: "Roboto", sans-serif;
+    @include tablet {
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
+
+    // 不知道為甚麼圖示後的文字無法對齊
     li {
-      margin-bottom: 16px;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+        @include tablet {
+          margin-bottom: 12px;
+        }
+      }
       img {
+        display: inline-block;
         margin-right: 20px;
+        @include tablet {
+          margin-right: 10px;
+          width: 18px;
+          height: 18px;
+        }
       }
     }
   }
+
   .copyright {
     margin-top: 32px;
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      margin-top: 24px;
+      ul {
+        margin-top: 36px;
+      }
+    }
     ul {
       display: flex;
       font-size: 14px;
 
       li:not(:last-child) {
         margin-right: 48px;
+        @include tablet {
+          margin-right: 24px;
+        }
       }
     }
   }
