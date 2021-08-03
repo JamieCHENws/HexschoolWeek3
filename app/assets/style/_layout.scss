@@ -1,29 +1,26 @@
-a {
-  color: $head-footer-font-color;
-}
 .header {
-  height: 108px;
   background-color: $themes-primary;
+  color: $head-footer-font-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 88px;
-  padding-right: 88px;
+  padding: 30px 88px 29.43px 88px;
   font-size: 20px;
   @include tablet() {
-    padding-left: 39px;
-    padding-right: 39px;
+    padding: 30px 39px 29.43px 39px;
   }
+
   @include mobile {
-    height: 140px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 0px 0px 0px 0px;
+
     img {
       width: 48px;
       height: 29px;
+      padding-top: 10px;
+      padding-bottom: 10.86px;
     }
   }
   ul {
@@ -38,6 +35,10 @@ a {
         height: 45px;
         box-sizing: border-box;
         border: #ffffff solid 1px;
+        padding-top: 8px;
+      }
+      li:hover {
+        border: solid 1px #8ba7bc;
       }
     }
     li:not(:last-child) {
@@ -50,6 +51,9 @@ a {
       }
     }
   }
+  a {
+    color: $head-footer-font-color;
+  }
 }
 
 .footer {
@@ -57,101 +61,157 @@ a {
   color: $head-footer-font-color;
   padding-top: 44px;
   padding-bottom: 39px;
-  &-contain {
-    width: 1110px;
-    margin: 0 auto;
-    @include tablet() {
-      width: 690px;
-    }
-  }
-  @include tablet() {
+  @include tablet {
     padding-top: 38px;
     padding-bottom: 21px;
   }
-
-  .links {
+  @include mobile {
+    padding-top: 25px;
+    padding-bottom: 24px;
+  }
+  a {
+    color: $head-footer-font-color;
+  }
+  &-contain {
+    width: 1110px;
+    margin: 0 auto;
+    @include tablet {
+      width: 690px;
+    }
+    @include mobile {
+      width: 334.5px;
+    }
+  }
+  .contact {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
-    align-items: center;
-    margin-bottom: 36px;
+    align-items: flex-start;
     @include tablet {
-      margin-bottom: 18px;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
     }
-    ul {
+    @include mobile {
+      padding-bottom: 24px;
+      margin-bottom: 16px;
+    }
+
+    &-nav {
       display: flex;
-      &:nth-child(1) li:not(:last-child) {
+      padding-top: 12px; //為了與右側的icon對齊
+      margin-bottom: 36px;
+      @include tablet {
+        padding-top: 6px;
+        margin-bottom: 18px;
+      }
+      @include mobile {
+        display: none;
+      }
+      li:not(:last-child) {
         margin-right: 48px;
         @include tablet {
           margin-right: 40px;
         }
       }
-      &:nth-child(2) {
-        img {
-          @include tablet {
-            width: 24px;
-            height: 24px;
-          }
-        }
-        li:not(:last-child) {
-          margin-right: 32px;
-          @include tablet {
-            margin-right: 24px;
-          }
-        }
+    }
+
+    &-info {
+      font-family: "Roboto", sans-serif;
+      font-size: 36px;
+      @include tablet {
+        font-size: 20px;
       }
-    }
-  }
-
-  .contact {
-    border-bottom: 1px solid #ffffff;
-    font-size: 36px;
-    padding-bottom: 24px;
-    font-family: "Roboto", sans-serif;
-    @include tablet {
-      font-size: 20px;
-      padding-bottom: 20px;
-    }
-
-    // 不知道為甚麼圖示後的文字無法對齊
-    li {
-      &:not(:last-child) {
-        margin-bottom: 16px;
-        @include tablet {
-          margin-bottom: 12px;
+      @include mobile {
+        font-size: 16px;
+      }
+      li {
+        //不知道為甚麼兩行的文字無法對齊
+        &:first-child {
+          margin-bottom: 16px;
+          @include tablet {
+            margin-bottom: 12px;
+          }
+          @include mobile {
+            margin-bottom: 6px;
+          }
+          img {
+            margin-right: 22px;
+            @include tablet {
+              width: 18px;
+              height: 18px;
+              margin-right: 11px;
+            }
+            @include mobile {
+              width: 15px;
+              height: 15px;
+              margin-right: 6.5px;
+            }
+          }
+        }
+        &:last-child img {
+          width: 40px;
+          height: 32px;
+          margin-right: 20px;
+          @include tablet {
+            width: 20px;
+            height: 16px;
+            margin-right: 10px;
+          }
+          @include mobile {
+            width: 16.67px;
+            height: 13.33px;
+            margin-right: 6.67px;
+          }
         }
       }
       img {
         display: inline-block;
-        margin-right: 20px;
+      }
+    }
+
+    &-thirdparty {
+      display: flex;
+      li:not(:last-child) {
+        margin-right: 32px;
         @include tablet {
-          margin-right: 10px;
-          width: 18px;
-          height: 18px;
+          margin-right: 24px;
+        }
+      }
+      @include tablet {
+        img {
+          width: 24px;
+          height: 24px;
         }
       }
     }
   }
 
   .copyright {
-    margin-top: 32px;
     display: flex;
     justify-content: space-between;
-
-    @include tablet {
-      margin-top: 24px;
-      ul {
-        margin-top: 36px;
-      }
+    @include mobile {
+      flex-direction: column;
+      font-size: 14px;
     }
     ul {
       display: flex;
       font-size: 14px;
-
       li:not(:last-child) {
         margin-right: 48px;
         @include tablet {
           margin-right: 24px;
+        }
+      }
+      @include tablet {
+        padding-top: 12px;
+      }
+      @include mobile {
+        flex-direction: column;
+        padding-top: 0px;
+        li {
+          margin-top: 8px;
         }
       }
     }
