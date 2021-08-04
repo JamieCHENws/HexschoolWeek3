@@ -362,18 +362,74 @@ img {
           .footer .copyright ul li {
             margin-top: 8px; } }
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: #002df8;
+.index-main {
+  color: #650300; }
+  .index-main h1,
+  .index-main h2,
+  .index-main h3 {
+    font-weight: bold; }
+  .index-main h1 {
+    font-size: 64px; }
+  .index-main h2 {
+    font-size: 48px;
+    margin-top: 60px;
+    margin-bottom: 40px; }
+  .index-main h3 {
+    font-size: 24px; }
+
+.banner {
+  background: url(../images/banner.png) center center no-repeat;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s; }
-  .box:hover {
-    width: 200px;
-    background-color: #00cc99; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 348px 20% 352px 48%; }
+  .banner span {
+    font-size: 36px; }
+
+.strength {
+  background-color: #aa06010d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto; }
+  .strength ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 80px; }
+    .strength ul li {
+      width: 255px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-right: 30px; }
+  .strength img {
+    width: 83.83px;
+    height: 83.83px; }
 
 /*# sourceMappingURL=all.css.map */
