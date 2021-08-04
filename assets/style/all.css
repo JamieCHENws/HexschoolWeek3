@@ -428,8 +428,57 @@ img {
           -ms-flex-align: center;
               align-items: center;
       margin-right: 30px; }
+      .strength ul li span {
+        color: #000000; }
   .strength img {
     width: 83.83px;
     height: 83.83px; }
+
+.classic-frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 80px; }
+  .classic-frame li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .classic-frame li:not(:last-child) {
+      margin-bottom: 32px; }
+    .classic-frame li img {
+      margin-right: 30px; }
+    .classic-frame li:nth-child(even) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+      .classic-frame li:nth-child(even) > img {
+        margin-left: 30px;
+        margin-right: 0px; }
+    .classic-frame li p {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .classic-frame li p img {
+        width: 44px;
+        height: 44px;
+        margin-right: 10px; }
+    .classic-frame li span {
+      font-size: 48px;
+      color: #aa0601;
+      font-weight: bold;
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      font-style: italic; }
 
 /*# sourceMappingURL=all.css.map */
